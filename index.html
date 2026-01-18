@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>להישאר רלבנטיות בעולם העבודה החדש – דף עבודה</title>
+
+  <style>
+    :root {
+      --plum: #651341;
+      --teal-dark: #16697A;
+      --teal: #489FB5;
+      --teal-light: #82C0CC;
+      --offwhite: #EDE7E3;
+      --orange: #FFA62B;
+      --paper: #ffffff;
+      --text: var(--teal-dark);
+      --line: rgba(22, 105, 122, 0.22);
+      --soft: rgba(237, 231, 227, 0.55);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      font-family: "Heebo", "Assistant", "Rubik", Calibri, Arial, sans-serif;
+      color: var(--text);
+      direction: rtl;
+    }
+
+    /* מרכז את הדף במסך, אבל לא מסתיר אותו */
+    .page {
+      max-width: 900px;
+      margin: 18px auto;
+      padding: 0 12px;
+    }
+
+    .sheet {
+      background: var(--paper);
+      border: 3px solid var(--plum);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .banner {
+      background: linear-gradient(90deg, var(--plum), var(--teal-dark));
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .content {
+      padding: 18px 22px 16px;
+    }
+
+    .section { margin-top: 18px; }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--plum);
+      margin-bottom: 8px;
+    }
+
+    .adizes {
+      display: grid;
+      grid-template-columns: repeat(4, 50px);
+      gap: 10px;
+      justify-content: start; /* ב-RTL זה יתחיל מימין */
+    }
+
+    .adizes-box {
+      width: 50px;
+      height: 50px;
+      border: 2px solid var(--teal-dark);
+      border-radius: 10px;
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+      outline: none;
+      background: #fff;
+      color: var(--teal-dark);
+    }
+
+    .adizes-box:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255, 166, 43, 0.22);
+    }
+
+    .line-input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid var(--line);
+      padding: 8px 4px 6px;
+      font-size: 15px;
+      outline: none;
+      background: transparent;
+      margin-bottom: 6px;
+      color: var(--teal-dark);
+    }
+
+    .line-input:focus { border-bottom-color: var(--orange); }
+
+    .numbered {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 8px;
+      align-items: end;
+    }
+
+    .num {
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--teal-dark);
+    }
+
+    .insights {
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      background: linear-gradient(180deg, #fff 0%, var(--soft) 100%);
+    }
+
+    .footer {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(22, 105, 122, 0.18);
+      text-align: center;
+      color: var(--teal-dark);
+      line-height: 1.4;
+    }
+
+    .footer .name {
+      font-weight: 900;
+      font-size: 14px;
+      color: var(--plum);
+    }
+
+    .footer .desc {
+      margin-top: 3px;
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--teal-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media print {
+      @page { size: A4; margin: 10mm; }
+      body { background: #fff; }
+      .page { margin: 0; padding: 0; }
+      .sheet { border-radius: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="sheet">
+
+      <div class="banner">להישאר רלבנטיות בעולם העבודה החדש</div>
+
+      <div class="content">
+
+        <div class="section">
+          <div class="section-title">הפרופיל שלי לפי אדיג׳ס</div>
+          <div class="adizes" aria-label="פרופיל אדיג'ס – 4 ריבועים">
+            <input class="adizes-box" maxlength="1" aria-label="תיבה 1" />
+            <input class="adizes-box" maxlength="1" aria-label="תיבה 2" />
+            <input class="adizes-box" maxlength="1" aria-label="תיבה 3" />
+            <input class="adizes-box" maxlength="1" aria-label="תיבה 4" />
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">הכישורים שלי - נקודות חוזק</div>
+          <div class="numbered">
+            <div class="row"><div class="num">1.</div><input class="line-input" /></div>
+            <div class="row"><div class="num">2.</div><input class="line-input" /></div>
+            <div class="row"><div class="num">3.</div><input class="line-input" /></div>
+            <div class="row"><div class="num">4.</div><input class="line-input" /></div>
+            <div class="row"><div class="num">5.</div><input class="line-input" /></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">כישורים לפיתוח</div>
+          <div class="numbered">
+            <div class="row"><div class="num">1.</div><input class="line-input" /></div>
+            <div class="row"><div class="num">2.</div><input class="line-input" /></div>
+            <div class="row"><div class="num">3.</div><input class="line-input" /></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">תובנות מרכזיות</div>
+          <div class="insights">
+            <input class="line-input" />
+            <input class="line-input" />
+            <input class="line-input" />
+            <input class="line-input" />
+            <input class="line-input" />
+            <input class="line-input" />
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">בחודש הקרוב אשקיע בלמידה של</div>
+          <input class="line-input" />
+          <input class="line-input" />
+        </div>
+
+        <div class="footer">
+          <div class="name">סימה ביטון קצביץ</div>
+          <div class="desc">פיתוח כישורים בעולם חדש</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
